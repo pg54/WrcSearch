@@ -3,7 +3,7 @@
  * @author baidu.inc
  */
 
-var projectName = 'credit-rights';
+var projectName = 'WrcSearch';
 var fs = require('fs');
 var path = require('path');
 var webpack = require('webpack');
@@ -33,7 +33,7 @@ module.exports = {
         ]
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'examples'),
         filename: '/assets/' + projectName + '/js/[name]_[hash:8].js',
         chunkFilename: '/assets/' + projectName + '/js/[name]_[hash:8]_chunk.js',
         publicPath: ''
@@ -121,7 +121,7 @@ module.exports = {
         }),
         // new ExtractTextPlugin('app.min.css'),
 
-        new CleanPlugin(['dist']),
+        new CleanPlugin(['examples']),
 
         new webpack.optimize.CommonsChunkPlugin({
             names: ['vendors', 'manifest'],
