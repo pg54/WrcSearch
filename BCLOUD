@@ -1,0 +1,1 @@
+BUILD_SUBMITTER -u . -x -e FIS -m baidu/wallet-sh-fe/credit-rights -c "cd baidu/wallet-sh-fe/credit-rights  &&  sh build.sh"

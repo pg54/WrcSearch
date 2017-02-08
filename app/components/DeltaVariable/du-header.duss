@@ -1,0 +1,14 @@
+$duHeaderBorderColor          : transparent;
+$duHeaderHeight               : $globalHeaderHeight;
+$duHeaderTitleColor           : #222;
+$duHeaderBackgroundColor      : #FFF;
+$duHeaderLineColor            : #EEE;
+$duHeaderTitleFontSize        : 36px;
+$duHeaderReturnPadding        : 0 50px 0 33px;
+$duHeaderActPadding           : 0 33px;
+
+$duHeaderReturnArrowFontSize  : 42px;
+$duHeaderReturnArrowColor     : #999;
+$duHeaderReturnArrowFontWeight: normal;
+
+$duHeaderActColor             : #222;
