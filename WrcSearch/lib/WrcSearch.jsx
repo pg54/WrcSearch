@@ -59,11 +59,11 @@ export default class WrcSearch extends Component {
         }
     }
     searchByWay (type, value) {
-        console.log(value)
+        // console.log(value)
         let searchResult = [];
         for (let item of this.props.list) {
             if (item[type].indexOf(value) >= 0) {
-                console.log(item[type])
+                // console.log(item[type])
                 searchResult.push(item);
             }
         }

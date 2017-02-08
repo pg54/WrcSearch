@@ -2295,7 +2295,7 @@ webpackJsonp([0],[
 	    }, {
 	        key: 'searchByWay',
 	        value: function searchByWay(type, value) {
-	            console.log(value);
+	            // console.log(value)
 	            var searchResult = [];
 	            var _iteratorNormalCompletion = true;
 	            var _didIteratorError = false;
@@ -2306,7 +2306,7 @@ webpackJsonp([0],[
 	                    var item = _step.value;
 
 	                    if (item[type].indexOf(value) >= 0) {
-	                        console.log(item[type]);
+	                        // console.log(item[type])
 	                        searchResult.push(item);
 	                    }
 	                }
@@ -2954,15 +2954,15 @@ webpackJsonp([0],[
 	    }
 	};
 
-	var _UsersBaiduDocumentsWrcSearch2Node_modulesReactTransformHmrLibIndexJs2 = (0, _index6.default)({
-	    filename: "/Users/baidu/Documents/\u7EC3\u4E60\u4EE3\u7801/\u7EC4\u4EF6/WrcSearch2/node_modules/react-deltaui/src/components/DuWrap/lib/DuWrap.jsx",
+	var _UsersBaiduDocumentsWrcSearchNode_modulesReactTransformHmrLibIndexJs2 = (0, _index6.default)({
+	    filename: "/Users/baidu/Documents/\u7EC3\u4E60\u4EE3\u7801/\u7EC4\u4EF6/WrcSearch/node_modules/react-deltaui/src/components/DuWrap/lib/DuWrap.jsx",
 	    components: _components,
 	    locals: [module],
 	    imports: [_react3.default]
 	});
 
-	var _UsersBaiduDocumentsWrcSearch2Node_modulesReactTransformCatchErrorsLibIndexJs2 = (0, _index4.default)({
-	    filename: "/Users/baidu/Documents/\u7EC3\u4E60\u4EE3\u7801/\u7EC4\u4EF6/WrcSearch2/node_modules/react-deltaui/src/components/DuWrap/lib/DuWrap.jsx",
+	var _UsersBaiduDocumentsWrcSearchNode_modulesReactTransformCatchErrorsLibIndexJs2 = (0, _index4.default)({
+	    filename: "/Users/baidu/Documents/\u7EC3\u4E60\u4EE3\u7801/\u7EC4\u4EF6/WrcSearch/node_modules/react-deltaui/src/components/DuWrap/lib/DuWrap.jsx",
 	    components: _components,
 	    locals: [],
 	    imports: [_react3.default, _index2.default]
@@ -2970,7 +2970,7 @@ webpackJsonp([0],[
 
 	function _wrapComponent(id) {
 	    return function (Component) {
-	        return _UsersBaiduDocumentsWrcSearch2Node_modulesReactTransformHmrLibIndexJs2(_UsersBaiduDocumentsWrcSearch2Node_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
+	        return _UsersBaiduDocumentsWrcSearchNode_modulesReactTransformHmrLibIndexJs2(_UsersBaiduDocumentsWrcSearchNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
 	    };
 	} /**
 	   * Created by delta
