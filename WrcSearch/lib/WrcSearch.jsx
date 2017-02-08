@@ -15,6 +15,7 @@ export default class WrcSearch extends Component {
             hasSearch: false,
             searchResult: []
         }
+        // console.log(this.props.searchData.chinese)
     }
     componentWillMount () {
         style.use();
@@ -46,7 +47,7 @@ export default class WrcSearch extends Component {
                 // toPinyin.transToPinyin(e.target.value)
             }
             else {
-                self.searchByWay(self.props.searchData.letter, e.target.value);
+                self.searchByWay(self.props.searchData.letter, e.target.value.toUpperCase());
             }
         }
         // 匹配不成功如符号等
@@ -58,9 +59,11 @@ export default class WrcSearch extends Component {
         }
     }
     searchByWay (type, value) {
+        console.log(value)
         let searchResult = [];
         for (let item of this.props.list) {
             if (item[type].indexOf(value) >= 0) {
+                console.log(item[type])
                 searchResult.push(item);
             }
         }
@@ -79,7 +82,7 @@ export default class WrcSearch extends Component {
                             this.state.searchResult.map((item, k) => {
                                 return (
                                     <li key={k} className="du-item du-item-link">
-                                        <a href="">{item.cityName}</a>
+                                        <a href="">{item[this.props.searchData.chinese]}</a>
                                     </li>
                                 )
                             })

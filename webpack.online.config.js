@@ -2,13 +2,13 @@
  * @file   webpack.config.js
  * @author baidu.inc
  */
-
 var fs = require('fs');
 var path = require('path');
 var webpack = require('webpack');
 var autoprefixer = require('autoprefixer');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
+var CleanPlugin = require('clean-webpack-plugin');
 
 // 一些路径信息
 var ROOT_PATH = path.resolve(__dirname);
@@ -40,10 +40,10 @@ module.exports = {
         // 文件输出目录
         path: path.resolve(__dirname, 'examples'),
         // 根据entry的入口名称生成多个js文件
-        filename: '/js/[name].js',
-        chunkFilename: '/js/[name].chunk.js',
+        filename: 'js/[name].js',
+        chunkFilename: 'js/[name].chunk.js',
         // 用于配置文件发布路径，如CDN或本地服务器
-        publicPath: ''
+        publicPath: '.'
     },
     // 各种加载器，让各种文件格式可用require引用
     module: {
@@ -146,17 +146,18 @@ module.exports = {
     // enable dev server
     devServer: {
         historyApiFallback: true,
-        hot: true,
+        hot: false,
         inline: true,
         progress: true,
         host: '0.0.0.0'
     },
 
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin('vendors', '/js/vendors.js'),
+        new webpack.optimize.CommonsChunkPlugin('vendors', 'js/vendors.js'),
+        new CleanPlugin(['examples']),
         new HtmlWebpackPlugin({
             title: 'WrcSearch',
-            filename: 'index.html',
+            filename: './index.html',
             template: './index.html.tpl',
             // chunks这个参数告诉插件要引用entry里面的哪几个入口
             chunks: [
